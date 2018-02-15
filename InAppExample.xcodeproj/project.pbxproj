@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9137CB4202CB84E00E0A713 /* InAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9137CB3202CB84E00E0A713 /* InAppTableViewCell.swift */; };
+		E9137CB8202CBF0000E0A713 /* InAppProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9137CB7202CBF0000E0A713 /* InAppProducts.swift */; };
+		E9137CBA202CD0FB00E0A713 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9137CB9202CD0FB00E0A713 /* IAPHelper.swift */; };
 		E91DF569202C660E0094B3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DF568202C660E0094B3B3 /* AppDelegate.swift */; };
 		E91DF56B202C660E0094B3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DF56A202C660E0094B3B3 /* ViewController.swift */; };
 		E91DF56E202C660E0094B3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91DF56C202C660E0094B3B3 /* Main.storyboard */; };
 		E91DF570202C660E0094B3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91DF56F202C660E0094B3B3 /* Assets.xcassets */; };
 		E91DF573202C660E0094B3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91DF571202C660E0094B3B3 /* LaunchScreen.storyboard */; };
+		E91DF57C202C66890094B3B3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91DF57B202C66890094B3B3 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9137CB3202CB84E00E0A713 /* InAppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppTableViewCell.swift; sourceTree = "<group>"; };
+		E9137CB7202CBF0000E0A713 /* InAppProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppProducts.swift; sourceTree = "<group>"; };
+		E9137CB9202CD0FB00E0A713 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		E91DF565202C660E0094B3B3 /* InAppExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91DF568202C660E0094B3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E91DF56A202C660E0094B3B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		E91DF56F202C660E0094B3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91DF572202C660E0094B3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E91DF574202C660E0094B3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E91DF57B202C66890094B3B3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91DF57C202C66890094B3B3 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				E91DF567202C660E0094B3B3 /* InAppExample */,
 				E91DF566202C660E0094B3B3 /* Products */,
+				E91DF57A202C66890094B3B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +70,19 @@
 				E91DF56F202C660E0094B3B3 /* Assets.xcassets */,
 				E91DF571202C660E0094B3B3 /* LaunchScreen.storyboard */,
 				E91DF574202C660E0094B3B3 /* Info.plist */,
+				E9137CB3202CB84E00E0A713 /* InAppTableViewCell.swift */,
+				E9137CB7202CBF0000E0A713 /* InAppProducts.swift */,
+				E9137CB9202CD0FB00E0A713 /* IAPHelper.swift */,
 			);
 			path = InAppExample;
+			sourceTree = "<group>";
+		};
+		E91DF57A202C66890094B3B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E91DF57B202C66890094B3B3 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +118,11 @@
 					E91DF564202C660E0094B3B3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +164,9 @@
 			files = (
 				E91DF56B202C660E0094B3B3 /* ViewController.swift in Sources */,
 				E91DF569202C660E0094B3B3 /* AppDelegate.swift in Sources */,
+				E9137CB4202CB84E00E0A713 /* InAppTableViewCell.swift in Sources */,
+				E9137CBA202CD0FB00E0A713 /* IAPHelper.swift in Sources */,
+				E9137CB8202CBF0000E0A713 /* InAppProducts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
